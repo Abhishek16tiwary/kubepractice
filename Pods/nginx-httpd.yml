@@ -1,0 +1,15 @@
+---
+apiversion: v1
+kind: Pod
+metadata: 
+  name: nginx-https-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+    - name: httpd
+      image: httpd:latest
+      ports:
+        - containerPort: 80
