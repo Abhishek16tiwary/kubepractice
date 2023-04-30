@@ -1,0 +1,17 @@
+---
+apiversion: v1
+kind: Pod
+metadata:
+  name: nginx-alpine-app
+spec:
+  containers:
+    - name: nginx-app
+      image: nginx:latest
+      args:
+        - sleep
+        - 1d
+    - name: alpine-app
+      image: alpine:latest
+      args:
+        - sleep
+        - 1d
