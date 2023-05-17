@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins-dp
+  annotations:
+    kubernetes.io/change-cause: "Updated to Jenkins"
 spec:
   minReadySeconds: 1
   replicas: 8
