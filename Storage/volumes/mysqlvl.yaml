@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-volumes
+  labels:
+    app: mysql
+spec:
+  containers:
+    - name: mysql
+      image: mysql:latest
+      ports:
+        - containerPort: 3306
+      volumeMounts: 
+        name: myvol
+        mountPath: /var/lib/mysql
+  volumes:
+    - name: myvol 
+      emptyDir:
+        sizeLimit: 500Mi
