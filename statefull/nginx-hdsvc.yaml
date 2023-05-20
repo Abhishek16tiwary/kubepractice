@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginxhd-svc
+spec:
+  selector:
+    app: nginx
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: nginxhd-svc
+      port: 80
+      targetPort: 80
+      protocol: TCP
