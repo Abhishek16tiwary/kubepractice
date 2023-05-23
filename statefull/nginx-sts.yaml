@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
+  serviceName: nginxhd-svc
   template:
     metadata:
       name: nginx
